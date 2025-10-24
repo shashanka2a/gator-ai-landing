@@ -17,7 +17,7 @@ const missions = [
   {
     icon: Zap,
     title: "Research-Ready Infrastructure",
-    description: "Production-grade systems that accelerate academic and commercial breakthroughs",
+    description: "Production-grade systems powering academic & commercial breakthroughs",
   },
 ];
 
