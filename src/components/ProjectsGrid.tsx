@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Card } from "./ui/card";
-import { Button } from "./ui/button";
 import { ArrowRight, Code, Brain, TrendingUp } from "lucide-react";
 import Link from "next/link";
 
@@ -69,41 +68,38 @@ export function ProjectsGrid() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
             >
-              <Card className="group relative overflow-hidden bg-gradient-to-br from-[#1A1A1F] to-[#0B0B0F] border-[#4DB5FF]/20 hover:border-[#4DB5FF]/40 transition-all duration-500 p-8 h-full hover:scale-[1.02]">
-                {/* Animated Background Gradient */}
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
-                
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
-                  <project.icon className="w-8 h-8 text-white" />
-                </div>
+              <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                <Card className="group relative overflow-hidden bg-gradient-to-br from-[#1A1A1F] to-[#0B0B0F] border-[#4DB5FF]/20 hover:border-[#4DB5FF]/40 transition-all duration-500 p-8 h-full hover:scale-[1.02] cursor-pointer">
+                  {/* Animated Background Gradient */}
+                  <div className={`absolute inset-0 bg-gradient-to-br ${project.gradient} opacity-0 group-hover:opacity-10 transition-opacity duration-500`} />
+                  
+                  {/* Icon */}
+                  <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${project.gradient} mb-6 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
+                    <project.icon className="w-8 h-8 text-white" />
+                  </div>
 
-                {/* Content */}
-                <div className="relative z-10">
-                  <h3 className="text-3xl text-white mb-2">
-                    {project.title}
-                  </h3>
-                  <p className="text-lg text-[#4DB5FF] mb-4 italic">
-                    {project.tagline}
-                  </p>
-                  <p className="text-gray-400 mb-6 leading-relaxed">
-                    {project.description}
-                  </p>
+                  {/* Content */}
+                  <div className="relative z-10">
+                    <h3 className="text-3xl text-white mb-2">
+                      {project.title}
+                    </h3>
+                    <p className="text-lg text-[#4DB5FF] mb-4 italic">
+                      {project.tagline}
+                    </p>
+                    <p className="text-gray-400 mb-6 leading-relaxed">
+                      {project.description}
+                    </p>
 
-                  <Link href={project.url} target="_blank" rel="noopener noreferrer">
-                    <Button
-                      variant="ghost"
-                      className="text-[#4DB5FF] hover:text-white hover:bg-[#4DB5FF]/10 group/btn"
-                    >
+                    <div className="flex items-center text-[#4DB5FF] hover:text-white group/btn">
                       Learn More
                       <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
-                </div>
+                    </div>
+                  </div>
 
-                {/* Corner Accent */}
-                <div className={`absolute -bottom-12 -right-12 w-48 h-48 bg-gradient-to-br ${project.gradient} opacity-10 rounded-full blur-3xl group-hover:opacity-20 transition-opacity`} />
-              </Card>
+                  {/* Corner Accent */}
+                  <div className={`absolute -bottom-12 -right-12 w-48 h-48 bg-gradient-to-br ${project.gradient} opacity-10 rounded-full blur-3xl group-hover:opacity-20 transition-opacity`} />
+                </Card>
+              </Link>
             </motion.div>
           ))}
         </div>

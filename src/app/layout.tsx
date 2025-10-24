@@ -14,6 +14,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Gator AI Labs" }],
   creator: "Gator AI Labs",
   publisher: "University of Florida",
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' }
+    ],
+    apple: '/favicon.svg',
+  },
   robots: {
     index: true,
     follow: true,

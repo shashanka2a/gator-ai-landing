@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { Sparkles } from "lucide-react";
+import { GatorAIIcon } from "./ui/gator-ai-icon";
 
 export function Hero() {
   return (
@@ -28,25 +29,6 @@ export function Hero() {
       >
         <div className="absolute inset-0 bg-gradient-radial from-[#4DB5FF]/20 via-[#8B5CF6]/10 to-transparent rounded-full blur-3xl" />
         
-        {/* Animated Neural Lines */}
-        {[...Array(8)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute top-1/2 left-1/2 w-1 h-32 bg-gradient-to-b from-[#4DB5FF] to-transparent origin-top"
-            style={{
-              transform: `rotate(${i * 45}deg) translateY(-50%)`,
-            }}
-            initial={{ scaleY: 0, opacity: 0 }}
-            animate={{ scaleY: 1, opacity: 0.3 }}
-            transition={{
-              duration: 1.5,
-              delay: i * 0.15,
-              repeat: Infinity,
-              repeatType: "reverse",
-              repeatDelay: 2,
-            }}
-          />
-        ))}
       </motion.div>
 
       {/* Floating Particles */}
@@ -78,7 +60,7 @@ export function Hero() {
           transition={{ duration: 0.8, delay: 0.2 }}
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gradient-to-r from-[#4DB5FF]/10 to-[#8B5CF6]/10 border border-[#4DB5FF]/20 mb-8">
-            <Sparkles className="w-4 h-4 text-[#4DB5FF]" />
+            <GatorAIIcon className="w-4 h-4 text-[#4DB5FF]" />
             <span className="text-sm text-[#4DB5FF]">Intelligence Built on Campus</span>
           </div>
 

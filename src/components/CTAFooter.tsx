@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { Button } from "./ui/button";
 import { ExternalLink, Github, Mail } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
+import { GatorAIIcon } from "./ui/gator-ai-icon";
 
 export function CTAFooter() {
   return (
@@ -56,7 +57,7 @@ export function CTAFooter() {
           >
             <div className="flex items-center gap-3">
               <div className="w-12 h-12 rounded-full bg-gradient-to-br from-[#4DB5FF] to-[#8B5CF6] flex items-center justify-center shadow-lg shadow-[#4DB5FF]/30">
-                <span className="text-white text-xl">🐊</span>
+                <GatorAIIcon className="w-6 h-6 text-white" />
               </div>
               <div>
                 <div className="text-white text-lg">Gator AI</div>
