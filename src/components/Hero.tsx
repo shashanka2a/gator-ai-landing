@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { Sparkles, FileText, Users } from "lucide-react";
+import { Sparkles } from "lucide-react";
 
 export function Hero() {
   return (
@@ -83,16 +83,16 @@ export function Hero() {
           </div>
 
           <h1 className="text-6xl md:text-7xl lg:text-8xl mb-6 bg-gradient-to-r from-white via-[#4DB5FF] to-[#8B5CF6] bg-clip-text text-transparent tracking-tight">
-            The Future of AI Engineering — Built at UF.
+            The Future of AI Engineering Built at UF.
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-400 mb-12 max-w-4xl mx-auto leading-relaxed">
             Harnessing HiPerGator's supercomputing power to train sovereign AI agents, 
-            automate research, and build the next generation of intelligence — right here on campus.
+            automate research, and build the next generation of intelligence right here on campus.
           </p>
 
           <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4"
+            className="flex items-center justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -104,41 +104,9 @@ export function Hero() {
               <Sparkles className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
               Explore Projects
             </Button>
-            
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[#4DB5FF]/30 hover:bg-[#4DB5FF]/10 px-8 py-6 text-lg"
-            >
-              <FileText className="mr-2 w-5 h-5" />
-              Pitch Deck for UF Management
-            </Button>
-            
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-[#8B5CF6]/30 hover:bg-[#8B5CF6]/10 px-8 py-6 text-lg"
-            >
-              <Users className="mr-2 w-5 h-5" />
-              Join Gator AI Labs
-            </Button>
           </motion.div>
         </motion.div>
 
-        {/* Scroll Indicator */}
-        <motion.div
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
-          animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 2, repeat: Infinity }}
-        >
-          <div className="w-6 h-10 border-2 border-[#4DB5FF]/30 rounded-full flex items-start justify-center p-2">
-            <motion.div
-              className="w-1 h-2 bg-[#4DB5FF] rounded-full"
-              animate={{ y: [0, 12, 0] }}
-              transition={{ duration: 2, repeat: Infinity }}
-            />
-          </div>
-        </motion.div>
       </div>
     </section>
   );

@@ -23,7 +23,7 @@ export function CTAFooter() {
         >
           {/* Headline */}
           <h2 className="text-4xl md:text-5xl lg:text-6xl text-white mb-6 leading-tight">
-            From Gainesville to Global AI —<br />
+            From Gainesville to Global AI<br />
             Let's Build the Infrastructure of Intelligence.
           </h2>
 

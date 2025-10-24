@@ -4,31 +4,35 @@ import { motion } from "framer-motion";
 import { Card } from "./ui/card";
 import { Button } from "./ui/button";
 import { ArrowRight, Code, Brain, TrendingUp } from "lucide-react";
+import Link from "next/link";
 
 const projects = [
   {
     icon: Code,
     title: "RexAgent",
-    tagline: "The AI That Codes While You Sleep.",
-    description: "Autonomous coding agent that writes, tests, and deploys production-ready code using advanced reasoning chains.",
+    tagline: "The AI That Codes While You Sleep",
+    description: "Autonomous coding agent that writes, tests, and deploys production-ready code using advanced reasoning chains and intelligent automation.",
     gradient: "from-[#4DB5FF] to-[#8B5CF6]",
-    size: "large",
+    size: "medium",
+    url: "https://www.rexagent.app/",
   },
   {
     icon: Brain,
     title: "Nalandaï",
-    tagline: "Sovereign Code Generation Engine.",
-    description: "Campus-trained LLM specialized in software engineering, built on HiPerGator infrastructure.",
+    tagline: "Sovereign Code Generation Engine",
+    description: "Campus-trained LLM specialized in software engineering, built on HiPerGator infrastructure with advanced reasoning capabilities.",
     gradient: "from-[#8B5CF6] to-[#EC4899]",
     size: "medium",
+    url: "https://www.nalandai.com/",
   },
   {
     icon: TrendingUp,
     title: "BlueBeetle.live",
-    tagline: "Agentic Intelligence for the Markets.",
-    description: "Real-time market analysis and trading strategies powered by multi-agent AI systems.",
+    tagline: "Agentic Intelligence for the Markets",
+    description: "Real-time market analysis and trading strategies powered by multi-agent AI systems with intelligent decision-making capabilities.",
     gradient: "from-[#4DB5FF] to-[#06B6D4]",
     size: "medium",
+    url: "https://bluebeetle.app/",
   },
 ];
 
@@ -55,11 +59,11 @@ export function ProjectsGrid() {
         </motion.div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={index}
-              className={`${project.size === 'large' ? 'lg:col-span-2' : 'lg:col-span-1'}`}
+              className="lg:col-span-1"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
@@ -86,13 +90,15 @@ export function ProjectsGrid() {
                     {project.description}
                   </p>
 
-                  <Button
-                    variant="ghost"
-                    className="text-[#4DB5FF] hover:text-white hover:bg-[#4DB5FF]/10 group/btn"
-                  >
-                    Learn More
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
-                  </Button>
+                  <Link href={project.url} target="_blank" rel="noopener noreferrer">
+                    <Button
+                      variant="ghost"
+                      className="text-[#4DB5FF] hover:text-white hover:bg-[#4DB5FF]/10 group/btn"
+                    >
+                      Learn More
+                      <ArrowRight className="ml-2 w-4 h-4 group-hover/btn:translate-x-1 transition-transform" />
+                    </Button>
+                  </Link>
                 </div>
 
                 {/* Corner Accent */}
