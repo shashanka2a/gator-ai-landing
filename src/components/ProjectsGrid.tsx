@@ -31,7 +31,7 @@ const projects = [
     description: "Real-time market analysis and trading strategies powered by multi-agent AI systems with intelligent decision-making capabilities.",
     gradient: "from-[#4DB5FF] to-[#06B6D4]",
     size: "medium",
-    url: "https://bluebeetle.app/",
+    url: "https://www.bluebeetle.online/",
   },
 ];
 
