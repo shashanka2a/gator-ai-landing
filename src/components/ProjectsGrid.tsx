@@ -37,7 +37,7 @@ const projects = [
 
 export function ProjectsGrid() {
   return (
-    <section className="relative py-32 px-6">
+    <section id="projects" className="relative py-32 px-6">
       {/* Background */}
       <div className="absolute inset-0 bg-[#0B0B0F]" />
 

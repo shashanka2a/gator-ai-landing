@@ -41,9 +41,12 @@ export function CTAFooter() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-[#4DB5FF] to-[#8B5CF6] hover:opacity-90 transition-opacity px-12 py-8 text-xl shadow-2xl shadow-[#4DB5FF]/30"
+              asChild
             >
-              <ExternalLink className="mr-3 w-6 h-6" />
-              View Pitch Deck
+              <a href="https://pitch.gatorai.academy/" target="_blank" rel="noopener noreferrer">
+                <ExternalLink className="mr-3 w-6 h-6" />
+                View Pitch Deck
+              </a>
             </Button>
           </motion.div>
 

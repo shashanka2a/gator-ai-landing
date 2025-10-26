@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
-import { Sparkles } from "lucide-react";
 import { GatorAIIcon } from "./ui/gator-ai-icon";
+import { ArrowRight } from "lucide-react";
 
 export function Hero() {
   return (
@@ -82,9 +82,12 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-gradient-to-r from-[#4DB5FF] to-[#8B5CF6] hover:opacity-90 transition-opacity px-8 py-6 text-lg group"
+              asChild
             >
-              <Sparkles className="mr-2 w-5 h-5 group-hover:rotate-12 transition-transform" />
-              Explore Projects
+              <a href="#projects" className="flex items-center group/btn">
+                Explore Projects
+                <ArrowRight className="ml-2 w-5 h-5 group-hover/btn:translate-x-1 transition-transform" />
+              </a>
             </Button>
           </motion.div>
         </motion.div>
